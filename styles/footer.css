@@ -1,0 +1,21 @@
+footer{
+	padding-bottom: 1.5em;
+	padding-top: 3em;
+
+}
+
+
+footer a {
+	text-decoration: none;
+	color: #F4FFFD;
+	margin-top: 16px;
+	margin-bottom: 4px;
+}
+
+
+
+footer ul {
+	list-style: none;
+	margin-left: 0px;
+	padding-left: 0px;
+}
