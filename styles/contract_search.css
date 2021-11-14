@@ -3,7 +3,7 @@
 	 height: 70%;
 	}
 
-.fixed-head thead th {
+.fixed-head thead tr th {
 	position: sticky;
 	 top: 0;
 	  z-index: 1;
