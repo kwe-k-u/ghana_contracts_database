@@ -1,0 +1,18 @@
+#auth_banner{
+	background-color: #0D00A4;
+	padding-left: 5em;
+	padding-top: 2em;
+	color: white;
+	/* padding-right: 2em; */
+}
+
+#auth_banner input{
+	background-color: #6E75A8;
+	border-radius: 36px;
+	width: 100%;
+
+}
+
+#auth_banner a {
+	color: whitesmoke;
+}

@@ -8,8 +8,13 @@
 	color: #04052E;
 }
 
-.cs-tertiary{
-	background-color: #04052E;
-	color: #F7FFF7;
+.cs-tertiary-transparent{
+	background-color: #6e75a834;
+	color: #04052E;
 }
 
+body::before{
+	display:block;
+	content:"";
+	height: 60px;
+}

@@ -1,7 +1,6 @@
 
 
-
-  <footer class="cs-primary cente">
+  <footer class="cs-primary center">
 	<div class="container">
 		<div class="row align-items-start">
 
@@ -11,25 +10,25 @@
 				<h4 class="mb-3 text-uppercase">Explore by status</h4>
 				<ul>
 					<li>
-						<a href="" class ="footer-link">Completed Projects</a>
+						<a href=<?php echo  CONTRACT_SEARCH_PATH?> class ="footer-link">Completed Projects</a>
 					</li>
 
 					<li>
-						<a href="" class ="footer-link">Ongoing Projects</a>
+						<a href=<?php echo  CONTRACT_SEARCH_PATH?> class ="footer-link">Ongoing Projects</a>
 					</li>
 
 					<li>
-						<a href="" class ="footer-link">Abandoned Projects</a>
+						<a href=<?php echo  CONTRACT_SEARCH_PATH?> class ="footer-link">Abandoned Projects</a>
 					</li>
 
 					<li>
-						<a href="" class ="footer-link">Pending Projects</a>
+						<a href=<?php echo  CONTRACT_SEARCH_PATH?> class ="footer-link">Pending Projects</a>
 					</li>
 
 					<br>
 
 					<li>
-						<a href="" class ="footer-link">Proposed Projects</a>
+						<a href=<?php echo  CONTRACT_SEARCH_PATH?> class ="footer-link">Proposed Projects</a>
 					</li>
 				</ul>
 
@@ -42,25 +41,25 @@
 				<h4 class="mb-3 text-uppercase">Explore by region</h4>
 				<ul>
 				<li>
-						<a href="" class ="footer-link">Greater Accra Region</a>
+						<a href=<?php echo  CONTRACT_SEARCH_PATH?> class ="footer-link">Greater Accra Region</a>
 					</li>
 					<li>
-						<a href="" class ="footer-link">Ashanti Region</a>
+						<a href=<?php echo  CONTRACT_SEARCH_PATH?> class ="footer-link">Ashanti Region</a>
 					</li>
 					<li>
-						<a href="" class ="footer-link">Central Region</a>
+						<a href=<?php echo  CONTRACT_SEARCH_PATH?> class ="footer-link">Central Region</a>
 					</li>
 					<li>
-						<a href="" class ="footer-link">Eastern Region</a>
+						<a href=<?php echo  CONTRACT_SEARCH_PATH?> class ="footer-link">Eastern Region</a>
 					</li>
 					<li>
-						<a href="" class ="footer-link">Northern Region</a>
+						<a href=<?php echo  CONTRACT_SEARCH_PATH?> class ="footer-link">Northern Region</a>
 					</li>
 					<li>
-						<a href="" class ="footer-link">Western Region</a>
+						<a href=<?php echo  CONTRACT_SEARCH_PATH?> class ="footer-link">Western Region</a>
 					</li>
 					<li>
-						<a href="" class ="footer-link">Oti Region</a>
+						<a href=<?php echo  CONTRACT_SEARCH_PATH?> class ="footer-link">Oti Region</a>
 					</li>
 
 
@@ -78,19 +77,19 @@
 				<ul>
 
 					<li>
-						<a href="" class ="footer-link">Ministry of Education</a>
+						<a href=<?php echo  CONTRACT_SEARCH_PATH?> class ="footer-link">Ministry of Education</a>
 					</li>
 
 					<li>
-						<a href="" class ="footer-link">Ministry of Health</a>
+						<a href=<?php echo  CONTRACT_SEARCH_PATH?> class ="footer-link">Ministry of Health</a>
 					</li>
 
 					<li>
-						<a href="" class ="footer-link">Ministry of Transportation</a>
+						<a href=<?php echo  CONTRACT_SEARCH_PATH?> class ="footer-link">Ministry of Transportation</a>
 					</li>
 
 					<li>
-						<a href="" class ="footer-link">Ministry of Information</a>
+						<a href=<?php echo  CONTRACT_SEARCH_PATH?> class ="footer-link">Ministry of Information</a>
 					</li>
 				</ul>
 
