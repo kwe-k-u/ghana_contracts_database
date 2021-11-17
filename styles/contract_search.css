@@ -1,3 +1,10 @@
+#contract-stats-sectio {
+	height: 200px;
+}
+
+
+
+
 .fixed-head {
 	overflow: auto;
 	 height: 70%;
@@ -21,4 +28,8 @@ th, td {
 
 th     {
 	background:#eee;
+ }
+
+ #table_actions_section .form_div  input{
+	 display: block;
  }
