@@ -46,7 +46,7 @@
 
 
 				<div class="col-md">
-					<img src="" class="img-fluid" alt="">
+					<img src="images/always_know.svg" class="img-fluid" alt="">
 					</div>
 
 				</div>
@@ -62,7 +62,7 @@
 		<div class="row align-items-center justify-content-between">
 
 			<div class="col-md">
-				<img src="" class="img-fluid" alt="">
+				<img src="images/public_acc.svg" class="img-fluid" alt="">
 				</div>
 				<div class="col-md p-5">
 					<h2>Public accountability simplified</h2>
