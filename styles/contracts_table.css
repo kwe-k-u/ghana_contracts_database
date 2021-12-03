@@ -2,3 +2,10 @@
 	height: 20em;
 	overflow-y: scroll;
 }
+
+#table_section{
+	margin-left: 2em!important;
+}
+#table_actions_section{
+	margin-left: 2em;
+}

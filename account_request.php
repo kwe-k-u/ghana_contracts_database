@@ -38,12 +38,16 @@
 						<input type="email" class="form-control" id="govEmail">
 					</div>
 					<div class="col-md-6">
-						<label for="password" class="form-label">Password for GCD</label>
-						<input type="password" class="form-control" id="passowrd">
-					</div>
-					<div class="col-12">
 						<label for="supName" class="form-label">Supervisor name</label>
 						<input type="text" class="form-control" id="supName" >
+					</div>
+					<div class="col-md-6">
+						<label for="password" class="form-label">Create Password</label>
+						<input type="password" class="form-control" 9id="passowrd">
+					</div>
+					<div class="col-md-6">
+						<label for="password" class="form-label">Confirm Password</label>
+						<input type="password" class="form-control" id="passowrd">
 					</div>
 					<div class="col-12">
 						<label for="address" class="form-label">Office Address</label>

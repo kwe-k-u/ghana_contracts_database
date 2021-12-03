@@ -37,7 +37,7 @@
 							<a href="contract_search.php" class="nav-link">contracts</a>
 						</li>
 						<li class="nav-item">
-							<a href="#instructors" role="button" class="nav-link btn-primary py-2">sign in</a>
+							<a href="#auth_banner" role="button" class="nav-link btn-primary py-2">sign in</a>
 						</li>
 					</ul>
 				</div>

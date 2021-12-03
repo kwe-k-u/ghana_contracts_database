@@ -57,18 +57,18 @@
 						<div class="row">
 							<div class="col">
 								<label>Start Year</label>
-								<input type="text" class="form-control" placeholder="First name" aria-label="First name">
+								<input type="year" class="form-control" aria-label="Start year">
 							</div>
 							<div class="col">
 								<label>End Year</label>
-								<input type="text" class="form-control" placeholder="First name" aria-label="First name">
+								<input type="date" class="form-control" aria-label="year">
 							</div>
 						</div>
 
 					</div>
 
 					<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-						<button class="btn btn-primary me-md-2" type="reset">Clear All</button>
+						<button class="btn btn-warning me-md-2" type="reset">Clear All</button>
 						<button class="btn btn-primary" type="submit">Search </button>
 					</div>
 				</div>
@@ -82,7 +82,7 @@
 
 
 	<div class="d-grid gap-2 d-md-flex justify-content-md-end pb-2">
-		<button class="btn btn-primary me-md-2" type="button">Download CSV</button>
+		<button class="btn btn-success me-md-2" type="button">Download CSV</button>
 		<button class="btn btn-primary" type="button">Search</button>
 	</div>
 
@@ -102,20 +102,22 @@
 		<thead>
 			<tr>
 				<th scope="col">INDEX</th>
-				<th scope="col">STATUS</th>
 				<th scope="col">PROJECT NAME</th>
+				<th scope="col">DESCRIPTION</th>
 				<th scope="col">CONSTRUCTOR NAME</th>
+				<th scope="col">REGION </th>
 				<th scope="col">START DATE</th>
 				<th scope="col">EXPECTED COMPLETION DATE</th>
+				<th scope="col">COMPLETION DATE</th>
 				<th scope="col">BUDGET</th>
-				<th scope="col">CURRENT EXPENDITURE</th>
-				<th scope="col">CURRENT EXPENDITURE</th>
+				<th scope="col">STATUS</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
 				<th scope="row">1</th>
 				<td>Mark</td>
+				<td>Otto</td>
 				<td>Otto</td>
 				<td>Otto</td>
 				<td>Otto</td>
