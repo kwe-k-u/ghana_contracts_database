@@ -20,7 +20,7 @@
 
   <title>Ghana Contracts Database - Contract Search</title>
 <?php require_once "header.php"; ?>
-
+<?php require_once "backend/controllers/projects_controller.php"; ?>
 <?php require_once "contracts_stats.php"; ?>
 <?php require_once "contracts_table.php"; ?>
 

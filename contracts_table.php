@@ -1,3 +1,4 @@
+
 <!-- table button and form  -->
 <section id="table_actions_section">
 	<div id="form_div">
@@ -112,20 +113,32 @@
 				<th scope="col">BUDGET</th>
 				<th scope="col">STATUS</th>
 			</tr>
-		</thead>
 		<tbody>
+		</thead>
+		<?php
+			// Getting all projects and displaying them
+
+			
+			$contracts = get_all_projects_with_contractors_status();
+
+
+
+			foreach ($contracts as $index => $contract){
+
+		?>
 			<tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td>Otto</td>
-				<td>Otto</td>
-				<td>Otto</td>
-				<td>Otto</td>
-				<td>Otto</td>
-				<td>Otto</td>
-				<td>Otto</td>
+				<th scope="row"><?php echo $index +1 ?></th>
+				<td><?php echo $contract["project_name"] ?></td>
+				<td><?php echo $contract["project_description"] ?></td>
+				<td><?php echo $contract["contractor_name"] ?></td>
+				<td><?php echo $contract["project_region"] ?></td>
+				<td><?php echo $contract["project_startdate"] ?></td>
+				<td><?php echo $contract["project_expected_endate"] ?></td>
+				<td><?php echo $contract["project_enddate"] ?? "-" ?></td>
+				<td><?php echo $contract["project_budget"] ?></td>
+				<td><?php echo $contract["status"] ?></td>
 			</tr>
+			<?php } ?>
 		</tbody>
 	</table>
 
