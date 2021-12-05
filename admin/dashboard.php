@@ -73,12 +73,6 @@ change a user's password
 						Requests
 					</a>
 				</li>
-				<li>
-					<a href="#" class="nav-link text-white" onclick="changeView(event, 'logs_section')">
-						<i class="bi bi-eyeglasses"></i>
-						Logs
-					</a>
-				</li>
 			</ul>
 
 
@@ -103,12 +97,11 @@ change a user's password
 
 		<!-- main section  -->
 		<section class="col-9">
+			<?php require_once("dashboard_main.php"); ?>
 			<?php require_once("admin_users.php"); ?>
 			<?php require_once("transactions.php"); ?>
-			<?php require_once("logs.php"); ?>
 			<?php require_once("insert_contract.php"); ?>
 			<?php require_once("requests.php"); ?>
-			<?php require_once("dashboard_main.php"); ?>
 		</section>
 
 	</div>

@@ -33,3 +33,24 @@ body{
 .active{
 	color: white;
 }
+
+.card{
+	margin: 2em;
+}
+
+#welcome_text{
+	margin-top: 2em;
+}
+
+username{
+	color: blue;
+	font-weight: bold;
+}
+
+#users_action_div{
+	display: flex!;
+}
+
+#editUserModal .modal-content{
+	padding: 3em 1em;
+}

@@ -1,8 +1,16 @@
-<section id="users_section" class="col-9 dashboard_content">
+<section id="users_section" class="col-9 dashboard_content" style="display: none;">
 
 
 	<!-- table actions  -->
 	<section>
+
+		<!-- <form action="" method="post"> -->
+			<div class="input-group mb-3" id="users_action_div">
+				<input type="search" name="user_search" id="user_search_bar">
+				<button type="" class="input-group-text">Search</button>
+			</div>
+			<!-- </form> -->
+			<td><button data-bs-toggle="modal" data-bs-target="#editUserModal" class="btn btn-info">Add User </button></td>
 	</section>
 
 	<!-- Use table  -->
@@ -33,10 +41,11 @@
 				<td>Trantra hill, WES 229</td>
 				<td>00233</td>
 				<td>12/21/2021</td>
-				<td><button class="btn btn-warning">Reset Password</button></td>
-				<td><button  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-danger">Delete </button></td>
+				<td><button data-bs-toggle="modal" data-bs-target="#editUserModal" class="btn btn-info">Edit </button></td>
+				<td><button data-bs-toggle="modal" data-bs-target="#deleteUserModal" class="btn btn-danger">Delete </button></td>
 			</tr>
 		</tbody>
 	</table>
-<?php require_once("delete_user_modal.php") ?>
+	<?php require_once("edit_user_modal.php") ?>
+	<?php require_once("delete_user_modal.php") ?>
 </section>
