@@ -17,4 +17,9 @@
 		$project = new Projects();
 		return $project->get_all_projects_with_contractors_status();
 	}
+	function get_all_projects_with_contractors_status_by_params($region){
+		$project = new Projects();
+		return $project->get_all_projects_with_contractors_status_by_params($region);
+	}
+
 ?>
