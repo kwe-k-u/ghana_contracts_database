@@ -1,4 +1,4 @@
-<section id="insert_contract_section">
+<section id="insert_contract_section" class='dashboard_content'>
 	<form class="row g-3">
 		<h3>Contract Details</h3>
 

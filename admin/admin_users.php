@@ -1,9 +1,8 @@
-<section id="users_section" class="col-9">
+<section id="users_section" class="col-9 dashboard_content">
 
 
 	<!-- table actions  -->
 	<section>
-		div
 	</section>
 
 	<!-- Use table  -->

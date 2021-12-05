@@ -26,3 +26,10 @@ body{
 #users_section{
 	width: 100%;
 }
+.nav-link{
+	color: white;
+}
+
+.active{
+	color: white;
+}

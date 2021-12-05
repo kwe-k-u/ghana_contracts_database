@@ -38,7 +38,7 @@
 					<input type="checkbox" class="form-check-input" id="exampleCheck1">
 					<label class="form-check-label" for="exampleCheck1">Check me out</label>
 				</div>
-				<p>Not an admin <a href="../index.php">Return to user website</a></p>
+				<p>Not an admin? <a href="../index.php">Return to user website</a></p>
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>
 		</div>
