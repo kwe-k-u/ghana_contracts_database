@@ -1,4 +1,18 @@
 <!-- table button and form  -->
+
+<?php
+
+	require_once("backend/php_functions/functions.php");
+	require_once("backend/php_functions/contracts_functions.php");
+	// Getting all projects and displaying them
+
+	if ($_GET) {
+		$contracts = getFunctions($_GET);
+	} else {
+
+		$contracts = get_all_projects_with_contractors_status();
+	}
+?>
 <section id="table_actions_section">
 	<div id="form_div">
 		<form action="" method="get">
@@ -112,8 +126,11 @@
 
 
 	<div class="d-grid gap-2 d-md-flex justify-content-md-end pb-2">
-		<button class="btn btn-success me-md-2" type="button">Download CSV</button>
+		<button class="btn btn-success me-md-2" type="button" onclick="download('ghana_contracts.csv')";> Download CSV</button>
 	</div>
+	<script type="text/javascript" src="backend/js_functions/contracts_table.js">
+
+</script>
 
 </section>
 
@@ -143,16 +160,6 @@
 		<tbody>
 			</thead>
 			<?php
-			require_once("backend/php_functions/functions.php");
-			require_once("backend/php_functions/contracts_functions.php");
-			// Getting all projects and displaying them
-
-			if ($_GET) {
-				$contracts = getFunctions($_GET);
-			} else {
-
-				$contracts = get_all_projects_with_contractors_status();
-			}
 
 			foreach ($contracts as $index => $contract) {
 

@@ -59,3 +59,31 @@
 		echo $query;
 		return  get_all_projects_with_contractors_status_by_params($query);
 	}
+
+
+
+	function download($results){
+
+// Fetch records from database
+
+    $delimiter = ",";
+    $filename = "members-data_" . date('Y-m-d') . ".csv";
+
+    // Create a file pointer
+    $f = fopen('php://memory', 'w');
+
+    // Set column headers
+    $fields = array('ID', 'FIRST NAME', 'LAST NAME', 'EMAIL', 'GENDER', 'COUNTRY', 'CREATED', 'STATUS');
+    fputcsv($f, $fields, $delimiter);
+
+    // Output each row of the data, format line as csv and write to file pointer
+    while($row = $results){
+		echo "<pre>";
+		var_dump($row);
+		echo "</pre>";
+		
+	}
+
+	}
+
+	?>
