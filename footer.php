@@ -110,6 +110,13 @@
 					kweku.acquaye@ashesi.edu.gh
 				</p>
 
+				<ul>
+					<li>
+					<a href="account_request.php">Request Account</a>
+				</li>
+
+				</ul>
+
 			</div>
 
 
