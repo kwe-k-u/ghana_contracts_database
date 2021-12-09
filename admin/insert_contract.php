@@ -1,4 +1,30 @@
-<section id="insert_contract_section" class='dashboard_content' style="display: none;">
+
+
+
+<!-- Admin capabilities -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+	<!-- <link rel="stylesheet" href="styles/admin_index.css" type="text/css"> -->
+
+
+
+
+	<title>GCD Admin</title>
+
+
+<body>
+<section id="insert_contract_section" class='dashboard_content' style="display: block; background-color: #efefef">
 	<form class="row g-3">
 		<h3>Contract Details</h3>
 
@@ -29,41 +55,34 @@
 			<input type="number" min="0" class="form-control" id="inputZip">
 		</div>
 		<div class="col-md-2">
-			<label for="inputZip" class="form-label">Start Date</label>
-			<input type="date" class="form-control" id="inputZip">
+			<label for="startDate" class="form-label">Start Date</label>
+			<input type="date" class="form-control" id="startDate">
 		</div>
 
 
 
 		<div class="col-md-2">
-			<label for="inputZip" class="form-label">Expenditure</label>
-			<input type="number" class="form-control" id="inputZip">
+			<label for="expenditure" class="form-label">Expenditure</label>
+			<input type="number" class="form-control" id="expenditure">
 		</div>
 		<div class="col-md-2">
-			<label for="inputZip" class="form-label">End Date</label>
-			<input type="date" class="form-control" id="inputZip">
+			<label for="endDate" class="form-label">End Date</label>
+			<input type="date" class="form-control" id="endDate">
 		</div>
 
 
 		<div class="col-md-4">
-			<label for="inputState" class="form-label">Status</label>
-			<select id="inputState" class="form-select">
+			<label for="status" class="form-label">Status</label>
+			<select id="status" class="form-select">
 				<option selected>Please select...</option>
 				<option>Proposed</option>
-				<option>Pending parliament</option>
-				<option>Parliamentary review</option>
-				<option>Approved</option>
-				<option>In progress</option>
-				<option>Stalling</option>
-				<option>Abandoned</option>
-				<option>Complete</option>
 			</select>
 		</div>
 
 
 		<div class="col-md-2">
-			<label for="inputZip" class="form-label">Projected End date</label>
-			<input type="date" class="form-control" id="inputZip">
+			<label for="expectedEndDate" class="form-label">Projected End date</label>
+			<input type="date" class="form-control" id="expectedEndDate">
 		</div>
 
 
@@ -84,6 +103,15 @@
 
 		<div class="col-12">
 			<button type="submit" class="btn btn-primary">Insert</button>
+			<!-- redirect to admin dashboard after insert  -->
 		</div>
 	</form>
 </section>
+</body>
+
+
+
+
+
+
+</html>

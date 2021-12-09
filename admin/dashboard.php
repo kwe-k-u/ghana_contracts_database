@@ -62,7 +62,7 @@ change a user's password
 				</li>
 
 				<li>
-					<a href="#" class="nav-link text-white" onclick="changeView(event, 'insert_contract_section')">
+					<a href="#" class="nav-link text-white" onclick="changeView(event, 'contracts_section')">
 						<i class="bi bi-briefcase"></i>
 						Contracts
 					</a>
@@ -100,7 +100,7 @@ change a user's password
 			<?php require_once("dashboard_main.php"); ?>
 			<?php require_once("admin_users.php"); ?>
 			<?php require_once("transactions.php"); ?>
-			<?php require_once("insert_contract.php"); ?>
+			<?php require_once("contracts.php"); ?>
 			<?php require_once("requests.php"); ?>
 		</section>
 
