@@ -8,7 +8,13 @@ require_once dirname( __FILE__ ) . '/' . '../users_class.php';
 	echo "<pre>";
 	var_dump($result);
 	echo "</pre>";
+	return $result;
 
+	}
+
+
+	function sign_in ($username, $password){
+		
 	}
 
 
@@ -24,9 +30,6 @@ require_once dirname( __FILE__ ) . '/' . '../users_class.php';
 	function request_password_reset($last_name, $gov_email, $sup_name, $office_address, $city, $zip, $password){
 		$user = new Users();
 		$result = $user->request_password_reset($last_name, $gov_email, $sup_name, $office_address, $city, $zip, $password);
-		echo "<pre>";
-		var_dump($result);
-		echo "</pre>";
 		return $result;
 	}
 ?>
