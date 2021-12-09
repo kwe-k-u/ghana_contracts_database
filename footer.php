@@ -10,11 +10,10 @@
 				<h4 class="mb-3 text-uppercase">Explore by status</h4>
 				<ul>
 					<li>
-						<a href="contract_search.php?status=completed" class ="footer-link">Completed Projects</a>
+						<a href="contract_search.php?status=complete" class ="footer-link">Completed Projects</a>
 					</li>
-
 					<li>
-						<a href="contract_search.php?status=ongoing" class ="footer-link">Ongoing Projects</a>
+						<a href="contract_search.php?status=in progress" class ="footer-link">Ongoing Projects</a>
 					</li>
 
 					<li>
@@ -22,7 +21,7 @@
 					</li>
 
 					<li>
-						<a href="contract_search.php?status=pending" class ="footer-link">Pending Projects</a>
+						<a href="contract_search.php?status=pending parliament" class ="footer-link">Pending Projects</a>
 					</li>
 
 					<br>
@@ -41,25 +40,25 @@
 				<h4 class="mb-3 text-uppercase">Explore by region</h4>
 				<ul>
 				<li>
-						<a href="contract_search.php?region=accra" class ="footer-link">Greater Accra Region</a>
+						<a href="contract_search.php?region=Greater Accra" class ="footer-link">Greater Accra Region</a>
 					</li>
 					<li>
-						<a href="contract_search.php?region=ashanti" class ="footer-link">Ashanti Region</a>
+						<a href="contract_search.php?region=Ashanti" class ="footer-link">Ashanti Region</a>
 					</li>
 					<li>
-						<a href="contract_search.php?region=central" class ="footer-link">Central Region</a>
+						<a href="contract_search.php?region=Central" class ="footer-link">Central Region</a>
 					</li>
 					<li>
-						<a href="contract_search.php?region=eastern" class ="footer-link">Eastern Region</a>
+						<a href="contract_search.php?region=Eastern" class ="footer-link">Eastern Region</a>
 					</li>
 					<li>
-						<a href="contract_search.php?region=northern" class ="footer-link">Northern Region</a>
+						<a href="contract_search.php?region=Northern" class ="footer-link">Northern Region</a>
 					</li>
 					<li>
-						<a href="contract_search.php?region=western" class ="footer-link">Western Region</a>
+						<a href="contract_search.php?region=Western" class ="footer-link">Western Region</a>
 					</li>
 					<li>
-						<a href="contract_search.php?region=oti" class ="footer-link">Oti Region</a>
+						<a href="contract_search.php?region=Oti" class ="footer-link">Oti Region</a>
 					</li>
 
 
@@ -77,20 +76,19 @@
 				<ul>
 
 					<li>
-						<a href="index.php?ministry=education" class ="footer-link">Ministry of Education</a>
-						<!-- <a href="contract_search.php" class ="footer-link">Ministry of Education</a> -->
+						<a href="contract_search.php?ministry=Education" class ="footer-link">Ministry of Education</a>
 					</li>
 
 					<li>
-						<a href="contract_search.php?ministry=health" class ="footer-link">Ministry of Health</a>
+						<a href="contract_search.php?ministry=Health" class ="footer-link">Ministry of Health</a>
 					</li>
 
 					<li>
-						<a href="contract_search.php?ministry=transportation" class ="footer-link">Ministry of Transportation</a>
+						<a href="contract_search.php?ministry=Transport" class ="footer-link">Ministry of Transportation</a>
 					</li>
 
 					<li>
-						<a href="contract_search.php?ministry=information" class ="footer-link">Ministry of Information</a>
+						<a href="contract_search.php?ministry=Information" class ="footer-link">Ministry of Information</a>
 					</li>
 				</ul>
 

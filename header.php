@@ -5,7 +5,7 @@
 
 <body class="cs-secondary">
 
-
+<?php require_once "backend/controllers/users_controllers.php"; ?>
 
 
 
