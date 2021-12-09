@@ -1,6 +1,6 @@
 <?php
 
-require ('db_class.php');
+require_once ('db_class.php');
 	class Institutions extends Connection{
 
 

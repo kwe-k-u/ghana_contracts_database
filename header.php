@@ -37,7 +37,7 @@
 							<a href="contract_search.php" class="nav-link">contracts</a>
 						</li>
 						<li class="nav-item">
-							<a href="#auth_banner" role="button" class="nav-link btn-primary py-2">sign in</a>
+							<a href="account_request.php" class="nav-link">Support</a>
 						</li>
 					</ul>
 				</div>
@@ -46,7 +46,3 @@
 	</header>
 
 
-
-	<?php
-	require_once "auth_banner.php";
-	?>

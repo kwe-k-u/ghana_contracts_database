@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="styles/main.css" type="text/css">
   <link rel="stylesheet" href="styles/header.css"  type="text/css">
   <link rel="stylesheet" href="styles/footer.css"  type="text/css">
-  <link rel="stylesheet" href= "styles/auth_banner.css"  type="text/css">
   <link rel="stylesheet" href= "styles/contract_search.css" type="text/css">
   <link rel="stylesheet" href= "styles/contracts_table.css" type="text/css">
 
@@ -21,15 +20,10 @@
   <title>Ghana Contracts Database - Contract Search</title>
 <?php require_once "header.php"; ?>
 <?php require_once "backend/controllers/projects_controller.php"; ?>
+
+
 <?php require_once "contracts_stats.php"; ?>
 <?php require_once "contracts_table.php"; ?>
-
-
-
-
-
-
-
 
 
 

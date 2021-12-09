@@ -125,7 +125,7 @@
 
 
 	<p class="text-center text-uppercase"> &copy; Copyright  2021 all rights reserved</p>
-	<p class="text-center"> Built and maintained by Duala Inc <a href="report_problem.php">Report a problem</a></p>
+	<p class="text-center"> Built and maintained by Duala Inc </p>
 
 
 </footer>
