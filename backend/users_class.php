@@ -30,7 +30,24 @@ require ('db_class.php');
 			return $this->query("UPDATE users SET status='deleted' where user_id = $user_id;");
 		}
 
-		
+
+		function request_account ($first_name, $last_name, $gov_email, $sup_name, $office_address, $city, $zip, $password){
+			return $this->query("INSERT INTO account_requests(
+				first_name,last_name, supervisor_name, password , email, city, zip, office_address)"
+				."VALUES ('$first_name', '$last_name', '$sup_name', '$password', '$gov_email', '$city', '$zip', '$office_address')");
+		}
+
+
+		function request_password_reset ( $last_name, $gov_email, $sup_name, $office_address, $city, $zip, $password){
+			return $this->query("INSERT INTO password_requests(last_name, supervisor_name, password, email, city, zip, office_address)"
+				."VALUES ( '$last_name', '$sup_name', '$password', '$gov_email', '$city', '$zip', '$office_address')");
+		}
+
+		function reset_password($user_id, $new_password){
+
+		}
+
+
 
 
 
