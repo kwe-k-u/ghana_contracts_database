@@ -43,6 +43,14 @@ class Admin extends Connection{
 		."VALUE ('$first_name', '$last_name', '$password', '$email', '$city', '$office_address', '$zip', '$creation_date', '$status');");
 	}
 
+	function update_user($id, $first_name, $last_name, $email, $city, $office_address, $zip){
+		return $this->query("UPDATE users SET first_name = '$first_name', last_name = '$last_name', email = '$email', city = '$city',
+		 office_address = '$office_address', zip = '$zip' WHERE user_id = $id; ");
+	}
+
+	function change_password($id, $newPassword){
+		return $this->query("UPDATE users SET password= '$newPassword' WHERE user_id = $id;");
+	}
 
 	function delete_user($user_id){
 		return $this->query("UPDATE users SET status='deleted' where user_id = $user_id;");

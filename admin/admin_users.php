@@ -57,10 +57,24 @@ foreach ($users as $index => $user) {
 				<td><?php echo $user["zip"] ?></td>
 				<td><?php echo formatDate($user["creation_date"]) ?></td>
 				<td><?php echo $user["status"] ?></td>
-				<td><button data-bs-toggle="modal" data-bs-target="#editUserModal" class="btn btn-info">Edit </button></td>
+				<td><button
+				onclick="edit_user_action(
+					'<?php echo $user['user_id'];?>',
+					'<?php echo $user['first_name'];?>',
+					'<?php echo $user['last_name'];?>',
+					'<?php echo $user['email'];?>',
+					'<?php echo $user['supervisor_name'];?>',
+					'<?php echo $user['office_address'];?>',
+					'<?php echo $user['city'];?>',
+					'<?php echo $user['zip'];?>',
+				)"data-bs-toggle="modal" data-bs-target="#editUserModal" class="btn btn-info">Edit </button></td>
+
+
 				<td>
 					<?php if ($user["status"] == "active"){ ?>
-					<button onclick="delete_user_action('<?php echo $user['email'];?>' , '<?php echo $user['user_id'];?>')" data-bs-toggle="modal" data-bs-target="#deleteUserModal" class="btn btn-danger" >Delete </button>
+					<button
+						onclick="delete_user_action('<?php echo $user['email'];?>' ,'<?php echo $user['user_id'];?>')"
+					data-bs-toggle="modal" data-bs-target="#deleteUserModal" class="btn btn-danger" >Delete </button>
 					<?php } else {?>
 						<button onclick="restore_user_action('<?php echo $user['email'];?>' , '<?php echo $user['user_id'];?>')" data-bs-toggle="modal" data-bs-target="#restoreUserModal" class="btn btn-success" >Restore </button>
 					<?php } ?>

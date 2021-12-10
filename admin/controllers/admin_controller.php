@@ -145,4 +145,15 @@ require_once dirname(__FILE__) ."/../models/admin_class.php";
 		$admin->restore_user($id);
 	}
 
+	function update_user($id, $first_name, $last_name, $email, $city, $office_address, $zip){
+		$admin = new Admin();
+		$admin->update_user($id, $first_name, $last_name, $email, $city, $office_address, $zip);
+
+	}
+
+
+	function change_password($id, $newPassword){
+		$admin = new Admin();
+		$admin->change_password($id, $newPassword);
+	}
 	?>

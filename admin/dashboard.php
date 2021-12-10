@@ -99,13 +99,6 @@ signedIn($_SESSION)
 	</section>
 
 
-	<?php
-	if (isset($_POST["create_user"])){
-		$creation_date = date("Y-m-d");
-		$result = sign_up($_POST["first_name"], $_POST["last_name"], $_POST["password"], $_POST["email"],
-		$_POST["city"], $_POST["address"], $_POST["zip"], $creation_date, "active");
-	}
-?>
 
 <!-- main section  -->
 <section class="col-9">
