@@ -4,6 +4,7 @@
 
 require_once(dirname(__FILE__) ."/controllers/admin_controller.php");
 require_once(dirname(__FILE__) ."../../backend/php_functions/functions.php");
+require_once(dirname(__FILE__) ."/php_functions/user_functions.php");
 
 $users = get_all_users();
 
@@ -23,6 +24,7 @@ $users = get_all_users();
 	<!-- Use table  -->
 	<h3>Users</h3>
 	<table class="table table-stripped sortable searchable">
+		<script src="javascript/users.js"></script>
 		<thead>
 			<tr>
 				<th scope="col">Index</th>
@@ -56,12 +58,19 @@ foreach ($users as $index => $user) {
 				<td><?php echo formatDate($user["creation_date"]) ?></td>
 				<td><?php echo $user["status"] ?></td>
 				<td><button data-bs-toggle="modal" data-bs-target="#editUserModal" class="btn btn-info">Edit </button></td>
-				<td><button data-bs-toggle="modal" data-bs-target="#deleteUserModal" class="btn btn-danger">Delete </button></td>
+				<td>
+					<?php if ($user["status"] == "active"){ ?>
+					<button onclick="delete_user_action('<?php echo $user['email'];?>' , '<?php echo $user['user_id'];?>')" data-bs-toggle="modal" data-bs-target="#deleteUserModal" class="btn btn-danger" >Delete </button>
+					<?php } else {?>
+						<button onclick="restore_user_action('<?php echo $user['email'];?>' , '<?php echo $user['user_id'];?>')" data-bs-toggle="modal" data-bs-target="#restoreUserModal" class="btn btn-success" >Restore </button>
+					<?php } ?>
+				</td>
 			</tr>
 			<?php } ?>
 		</tbody>
 	</table>
 	<?php require_once("delete_user_modal.php") ?>
+	<?php require_once("restoreUserModal.php") ?>
 	<?php require_once("edit_user_modal.php") ?>
 </section>
 

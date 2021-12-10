@@ -49,6 +49,12 @@ class Admin extends Connection{
 	}
 
 
+
+	function restore_user($user_id){
+		return $this->query("UPDATE users SET status='active' where user_id = $user_id;");
+	}
+
+
 	function search_user_by_email($email){
 		return $this->fetchOne("SELECT * FROM users WHERE email = '$email'");
 	}

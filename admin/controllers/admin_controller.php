@@ -134,3 +134,15 @@ require_once dirname(__FILE__) ."/../models/admin_class.php";
 
 		return $json;
 	}
+
+	function delete_user($id){
+		$admin = new Admin();
+		$admin->delete_user($id);
+	}
+
+	function restore_user($id){
+		$admin = new Admin();
+		$admin->restore_user($id);
+	}
+
+	?>
