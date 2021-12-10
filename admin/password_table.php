@@ -27,7 +27,7 @@
 			<th scope="row"> <?php echo $request['request_id'] ?> </th>
 			<td><?php echo $request['last_name'] ?></td>
 			<td><?php echo $request['email'] ?></td>
-			<td><?php echo $request['supervisor_name'] ?></td>>
+			<td><?php echo $request['supervisor_name'] ?></td>
 			<td><?php echo $request['office_address'] ?></td>
 			<td><?php echo $request['city'] ?></td>
 			<td><?php echo $request['zip'] ?></td>
