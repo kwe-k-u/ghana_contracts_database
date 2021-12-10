@@ -1,7 +1,4 @@
 <!-- Admin capabilities -->
-see make contract entries into the database
-remove a user
-change a user's password
 
 <!doctype html>
 <html lang="en">
