@@ -31,12 +31,12 @@
 				<div class="mb-3">
 					<label for="email" class="form-label">Email address</label>
 					<input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
-					<small >Enter a valid email</small>
+					<small ></small>
 				</div>
 				<div class="mb-3">
 					<label for="password" class="form-label">Password</label>
 					<input type="password" class="form-control" id="password" name="password">
-					<small>The password doesn't match</small>
+					<small></small>
 				</div>
 				<p>Not an admin? <a href="../index.php">Return to user website</a></p>
 				<button type="submit" class="btn btn-primary" name="login">Submit</button>
