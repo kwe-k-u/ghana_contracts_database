@@ -19,10 +19,6 @@
 			$query = $query ." project_status.status = '". $GET['status'] ."'";
 		}
 
-		// ministry
-		if (!empty($GET['ministry']) ){
-			$query = $query ." instituitions.institution_name = '". $GET['ministry'] ."'";
-		}
 
 		// budget
 		if ( !empty($GET['budget_to']) || !empty($GET['budget_from']) ){

@@ -72,24 +72,32 @@
 
 			<!-- Explore by ministry  -->
 			<div class="col">
-				<h4 class="mb-3 text-uppercase">Explore by ministry</h4>
+				<h4 class="mb-3 text-uppercase"> </h4><br>
 				<ul>
-
 					<li>
-						<a href="contract_search.php?ministry=Education" class ="footer-link">Ministry of Education</a>
+						<a href="contract_search.php?region=Bono East" class="footer-link">Bono East Region</a>
+					</li>
+					<li>
+						<a href="contract_search.php?region=Bono" class="footer-link">Bono Region</a>
+					</li>
+					<li>
+						<a href="contract_search.php?region=Savannah" class="footer-link">Savannah Region</a>
+					</li>
+					<li>
+						<a href="contract_search.php?region=Upper East" class="footer-link">Upper East Region</a>
+					</li>
+					<li>
+						<a href="contract_search.php?region=Upper West" class="footer-link">Upper West Region</a>
+					</li>
+					<li>
+						<a href="contract_search.php?region=Western North" class="footer-link">Western North" Region</a>
+					</li>
+					<li>
+						<a href="contract_search.php?region=Western" class="footer-link">Western Region</a>
 					</li>
 
-					<li>
-						<a href="contract_search.php?ministry=Health" class ="footer-link">Ministry of Health</a>
-					</li>
 
-					<li>
-						<a href="contract_search.php?ministry=Transport" class ="footer-link">Ministry of Transportation</a>
-					</li>
 
-					<li>
-						<a href="contract_search.php?ministry=Information" class ="footer-link">Ministry of Information</a>
-					</li>
 				</ul>
 
 			</div>

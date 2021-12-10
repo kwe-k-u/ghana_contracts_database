@@ -70,7 +70,7 @@
 							<!-- ministry drop down  -->
 							<div class="col">
 								<label>Ministry</label><br>
-								<select class="form-select" aria-label="Ministry" name="ministry">
+								<select class="form-select" aria-label="Ministry" name="ministry " disabled>
 									<option selected>All</option>
 
 									<?php
