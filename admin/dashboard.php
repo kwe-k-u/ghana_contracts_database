@@ -89,10 +89,6 @@ signedIn($_SESSION)
 				<strong><?php echo $_SESSION['user_name']; ?></strong>
 			</a>
 			<ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-				<li><a class="dropdown-item" href="#">Profile</a></li>
-				<li>
-					<hr class="dropdown-divider">
-				</li>
 				<li><a class="dropdown-item" href="logout.php">Sign out</a></li>
 			</ul>
 		</div>

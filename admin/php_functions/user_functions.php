@@ -43,8 +43,8 @@ if (isset($_POST["account_reject"])){
 }
 
 if (isset($_POST["add_transaction"])){
-	addTransansaction($_POST["id"],$_POST["amount"],formatDateForSQL($_POST["date"]), $_POST["sender"],$_POST["recipient"]);
-
+	$result = addTransansaction($_POST["amount"],formatDateForSQL($_POST["date"]), $_POST["sender"],$_POST["recipient"]);
+	header("LOCATION: $result");
 }
 
 ?>

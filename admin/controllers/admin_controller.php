@@ -189,14 +189,9 @@ require_once dirname(__FILE__) ."/../models/admin_class.php";
 		sign_up($first_name, $last_name, $password, $email, $city, $office_address, $zip, $creation_date, "approved");
 	}
 
-	function addTransansaction($id,$amount,$date, $sender,$recipient){
+	function addTransansaction($amount,$date, $sender,$recipient){
 		$admin = new Admin();
-		if ($id == "none"){
-			$admin->addTransaction($amount,$date, $sender,$recipient);
-		}
-		else{
-			$admin->updateTransaction($id, $amount,$date, $sender,$recipient);
-		}
+			return $admin->addTransaction($amount,$date, $sender,$recipient);
 	}
 
 	function get_gov_accounts(){

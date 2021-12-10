@@ -78,15 +78,12 @@ class Admin extends Connection{
 	}
 
 	function addTransaction($amount,$date, $sender,$recipient){
-		return $this->query("INSERT INTO transactions (amount, sender_account, recipient_account, transaction_date) "
-		."$amount, '$sender', '$recipient', '$date';");
+		return $this->query("INSERT INTO transactions (amount, sender_account, recipient_account, transaction_date) VALUES"
+		."($amount, '$sender', '$recipient', '$date');");
 	}
 
 
 
-	function updateTransaction($id, $amount,$date, $sender,$recipient){
-		return $this->query("UPDATE transactions SET amount = $amount, sender_account = '$sender', recipient_account = '$recipient', transaction_date = '$date'  WHERE transaction_id = $id;");
-	}
 
 	function get_gov_accounts(){
 		return $this->fetch("SELECT *
