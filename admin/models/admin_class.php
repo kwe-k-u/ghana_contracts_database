@@ -70,7 +70,15 @@ class Admin extends Connection{
 	function search_user_by_email($email){
 		return $this->fetchOne("SELECT * FROM users WHERE email = '$email'");
 	}
+	function get_account_request_by_id($id){
+		return $this->fetch("SELECT * FROM  account_requests WHERE request_id = $id;");
+	}
+	function account_request($id, $status){
+	return $this->query("UPDATE account_requests SET status = '$status' WHERE $id = $id");
+	}
 
 }
+
+
 
 ?>

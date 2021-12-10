@@ -170,4 +170,22 @@ require_once dirname(__FILE__) ."/../models/admin_class.php";
 		}
 
 	}
-	?>
+	function get_account_request_by_id($id){
+		$admin = new Admin();
+		return $admin->get_account_request_by_id($id);
+	}
+
+	function account_request_action($id, $status){
+		$admin = new Admin();
+		$admin->account_request($id, $status);
+
+	}
+
+	function account_request_action_approve($id,$first_name, $last_name, $password, $email, $city, $office_address, $zip){
+		$admin = new Admin();
+		$admin->account_request($id, "approved");
+		$creation_date = date("Y-m-d H:m:s");
+
+		sign_up($first_name, $last_name, $password, $email, $city, $office_address, $zip, $creation_date, "approved");
+	}
+?>

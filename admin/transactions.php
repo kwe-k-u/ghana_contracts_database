@@ -30,8 +30,6 @@
 					<td><?php echo formatNumber($transaction['amount']) ?></td>
 					<td><?php echo formatDate($transaction['transaction_date']) ?></td>
 					<td>Police highway patrol</td>
-					<td><button data-bs-toggle="modal" data-bs-target="#editUserModal" class="btn btn-info">Edit </button></td>
-					<td><button data-bs-toggle="modal" data-bs-target="#deleteUserModal" class="btn btn-danger">Delete </button></td>
 				</tr>
 			<?php } ?>
 		</tbody>

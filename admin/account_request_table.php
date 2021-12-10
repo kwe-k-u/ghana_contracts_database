@@ -38,9 +38,16 @@
 				if ($request["status"] === "pending"){
 			?>
 			<form action="dashboard.php" method="post">
-				<input type="text" name="id" value ='<?php echo $request["request_id"]?>' hidden>
-				<td> <button class="btn btn-primary" name="password_reset_approve"> Approve </button></td>
-				<td> <button class="btn btn-warning"name="password_reset_reject">Reject </button></td>
+                               <input type="text" name="id" value =<?php echo $request["request_id"]?> hidden>
+                               <input type="text" name="first_name" value =<?php echo $request["first_name"]?> hidden>
+                               <input type="text" name="last_name" value =<?php echo $request["last_name"]?> hidden>
+                               <input type="text" name="password" value =<?php echo $request["password"]?> hidden>
+                               <input type="text" name="email" value =<?php echo $request["email"]?> hidden>
+                               <input type="text" name="city" value =<?php echo $request["city"]?> hidden>
+                               <input type="text" name="office_address" value =<?php echo $request["office_address"]?> hidden>
+                               <input type="text" name="zip" value =<?php echo $request["zip"]?> hidden>
+                               <td> <button class="btn btn-primary" name="account_approve"> Approve </button></td>
+                               <td> <button class="btn btn-warning"name="account_reject">Reject </button></td>
 			</form>
 		</tr>
 		<?php } ?>
