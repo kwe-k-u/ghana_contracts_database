@@ -1,5 +1,9 @@
 <!-- Admin capabilities -->
-
+<?php session_start();
+	if (isset($_SESSION["user_id"])){
+		header("LOCATION: dashboard.php");
+	}
+?>
 <!doctype html>
 <html lang="en">
 
@@ -23,28 +27,38 @@
 <body>
 	<section id="main">
 		<div class="card" >
-			<form action="dashboard.php" method='post'>
+			<form action="" method='post'>
 				<div class="mb-3">
-					<label for="exampleInputEmail1" class="form-label">Email address</label>
-					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-					<small>Enter a valid email</small>
+					<label for="email" class="form-label">Email address</label>
+					<input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+					<small >Enter a valid email</small>
 				</div>
 				<div class="mb-3">
-					<label for="exampleInputPassword1" class="form-label">Password</label>
-					<input type="password" class="form-control" id="exampleInputPassword1">
+					<label for="password" class="form-label">Password</label>
+					<input type="password" class="form-control" id="password" name="password">
 					<small>The password doesn't match</small>
 				</div>
-				<div class="mb-3 form-check">
-					<input type="checkbox" class="form-check-input" id="exampleCheck1">
-					<label class="form-check-label" for="exampleCheck1">Check me out</label>
-				</div>
 				<p>Not an admin? <a href="../index.php">Return to user website</a></p>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="submit" class="btn btn-primary" name="login">Submit</button>
 			</form>
 		</div>
 	</section>
 </body>
 
+<?php
+require_once(dirname(__FILE__) ."/controllers/admin_controller.php");
+	if (isset($_POST["login"])){
+		$result = sign_in($_POST["email"], $_POST["password"]);
+
+		if ($result){
+			$_SESSION["user_id"] = $result["user_id"];
+			$_SESSION["user_name"] = $result["last_name"];
+			header("LOCATION: dashboard.php");
+
+		}
+
+	}
+?>
 
 
 

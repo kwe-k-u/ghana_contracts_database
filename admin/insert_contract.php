@@ -24,6 +24,11 @@
 
 
 <body>
+	<?php
+		
+require_once(dirname(__FILE__) ."../../backend/php_functions/functions.php");
+signedIn($_SESSION)
+	?>
 <section id="insert_contract_section" class='dashboard_content' style="display: block; background-color: #efefef">
 	<form class="row g-3">
 		<h3>Contract Details</h3>

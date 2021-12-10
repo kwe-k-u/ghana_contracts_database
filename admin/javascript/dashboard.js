@@ -18,3 +18,7 @@ function changeView(evt, cityName) {
 	document.getElementById(cityName).style.display = "block";
 	evt.currentTarget.className += " active";
   }
+
+  function test(){
+	  document.getElementById("test").style.display = "block";
+  }

@@ -1,6 +1,6 @@
 <?php
 
-  
+
 	function formatDate($date_str){
 		if (!$date_str)
 			return "n/a";
@@ -20,4 +20,18 @@
 		return date_format($date,"Y-m-d");
 	}
 
+
+	function obscure(
+		$plain,
+	) {
+		$str_len = floor(strlen($plain) /3);
+		return substr_replace($plain,str_repeat("*",$str_len ),$str_len,ceil($str_len*2)-2);
+	}
+
+	function signedIn($session){
+		if (! isset($session["user_id"])){
+			header("LOCATION: index.php");
+		}
+
+	}
 ?>

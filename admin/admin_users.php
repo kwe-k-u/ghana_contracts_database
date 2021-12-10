@@ -2,7 +2,7 @@
 
 <?php
 
-require_once(dirname(__FILE__) ."/controllers/adminUser_controller.php");
+require_once(dirname(__FILE__) ."/controllers/admin_controller.php");
 require_once(dirname(__FILE__) ."../../backend/php_functions/functions.php");
 
 $users = get_all_users();

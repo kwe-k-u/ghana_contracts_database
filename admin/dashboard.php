@@ -1,5 +1,4 @@
 <!-- Admin capabilities -->
-See all users
 see make contract entries into the database
 remove a user
 change a user's password
@@ -24,87 +23,100 @@ change a user's password
 	<title>GCD Admin</title>
 
 
-<body>
+	<body>
+
+		<?php
+		session_start();
+require_once(dirname(__FILE__) ."/controllers/admin_controller.php");
+require_once(dirname(__FILE__) ."../../backend/php_functions/functions.php");
+signedIn($_SESSION)
+?>
+
+<!-- nav bar  -->
+<div class="row" id='main'>
 
 
-	<!-- nav bar  -->
-	<div class="row" id='main'>
-
-
-		<!-- side bar  -->
-		<section id="side_bar" class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
-			<a href="../index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-				<span class="fs-4">View GCD</span>
-			</a>
-			<hr>
-			<ul class="nav nav-pills flex-column mb-auto">
-				<li class="nav-item">
-					<a href="#" class="nav-link active" onclick="changeView(event, 'dashboard_section')">
-						<i class="bi bi-house"></i>
-						Dashboard
-					</a>
-				</li>
-
-
-				<li>
-					<a href="#" class="nav-link text-white" onclick="changeView(event, 'users_section')">
-						<i class="bi bi-person-rolodex"></i>
-						Users
-					</a>
-				</li>
-
-
-				<li>
-					<a href="#" class="nav-link text-white" onclick="changeView(event, 'transactions_section')">
-						<i class="bi bi-coin"></i>
-						Transactions
-					</a>
-				</li>
-
-				<li>
-					<a href="#" class="nav-link text-white" onclick="changeView(event, 'contracts_section')">
-						<i class="bi bi-briefcase"></i>
-						Contracts
-					</a>
-				</li>
-				<li>
-					<a href="#" class="nav-link text-white" onclick="changeView(event, 'requests_section')">
-						<i class="bi bi-envelope"></i>
-						Requests
-					</a>
-				</li>
-			</ul>
-
-
-
-			<hr>
-			<div class="dropdown" id="profile_tag">
-				<a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-					<img src="https://github.com/mdo.png" alt="" class="rounded-circle me-2" width="32" height="32">
-					<strong>Kwame</strong>
+	<!-- side bar  -->
+	<section id="side_bar" class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
+		<a href="../index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+			<span class="fs-4">View GCD</span>
+		</a>
+		<hr>
+		<ul class="nav nav-pills flex-column mb-auto">
+			<li class="nav-item">
+				<a class="nav-link active" onclick="changeView(event, 'dashboard_section')">
+					<i class="bi bi-house"></i>
+					Dashboard
 				</a>
-				<ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-					<li><a class="dropdown-item" href="#">Profile</a></li>
-					<li>
-						<hr class="dropdown-divider">
-					</li>
-					<li><a class="dropdown-item" href="index.php">Sign out</a></li>
-				</ul>
-			</div>
-		</section>
+			</li>
+
+
+			<li>
+				<a  class="nav-link text-white" onclick="changeView(event, 'users_section')">
+					<i class="bi bi-person-rolodex"></i>
+					Users
+				</a>
+			</li>
+
+
+			<li>
+				<a class="nav-link text-white" onclick="changeView(event, 'transactions_section')">
+					<i class="bi bi-coin"></i>
+					Transactions
+				</a>
+			</li>
+
+			<li>
+				<a class="nav-link text-white" onclick="changeView(event, 'contracts_section')">
+					<i class="bi bi-briefcase"></i>
+					Contracts
+				</a>
+			</li>
+			<li>
+				<a class="nav-link text-white" onclick="changeView(event, 'requests_section')">
+					<i class="bi bi-envelope"></i>
+					Requests
+				</a>
+			</li>
+		</ul>
 
 
 
-		<!-- main section  -->
-		<section class="col-9">
-			<?php require_once("dashboard_main.php"); ?>
-			<?php require_once("admin_users.php"); ?>
-			<?php require_once("transactions.php"); ?>
-			<?php require_once("contracts.php"); ?>
-			<?php require_once("requests.php"); ?>
-		</section>
+		<hr>
+		<div class="dropdown" id="profile_tag">
+			<a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+				<img src="https://github.com/mdo.png" alt="" class="rounded-circle me-2" width="32" height="32">
+				<strong>Kwame</strong>
+			</a>
+			<ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+				<li><a class="dropdown-item" href="#">Profile</a></li>
+				<li>
+					<hr class="dropdown-divider">
+				</li>
+				<li><a class="dropdown-item" href="logout.php">Sign out</a></li>
+			</ul>
+		</div>
+	</section>
 
-	</div>
+
+	<?php
+	if (isset($_POST["create_user"])){
+		$creation_date = date("Y-m-d");
+		$result = sign_up($_POST["first_name"], $_POST["last_name"], $_POST["password"], $_POST["email"],
+		$_POST["city"], $_POST["address"], $_POST["zip"], $creation_date, "active");
+	}
+?>
+
+<!-- main section  -->
+<section class="col-9">
+	<?php require_once("dashboard_main.php"); ?>
+	<?php require_once("admin_users.php"); ?>
+	<?php require_once("transactions.php"); ?>
+	<?php require_once("contracts.php"); ?>
+	<?php require_once("requests.php"); ?>
+</section>
+
+</div>
 </body>
 
 

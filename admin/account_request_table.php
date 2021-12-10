@@ -3,6 +3,7 @@
 <section id="account_request_table">
 
 <table class="table table-hover table-bordered fixed-head">
+	<?php $accounts = get_account_requests(); ?>
 
 	<caption>List of All Requests</caption>
 	<h4>Account Requests</h4>
@@ -22,19 +23,21 @@
 		</tr>
 	</thead>
 	<tbody>
+		<?php foreach ($accounts as $request){ ?>
 		<tr>
-			<th scope="row">1</th>
-			<td>Otto</td>
-			<td>Otto</td>
-			<td>Otto</td>
-			<td>Otto</td>
-			<td>Otto</td>
-			<td>Otto</td>
-			<td>Otto</td>
-			<td>Otto</td>
+			<th scope="row"><?php echo $request['request_id'] ?></th>
+			<td><?php echo $request['first_name'] ?></td>
+			<td><?php echo $request['last_name'] ?></td>
+			<td><?php echo $request['email'] ?></td>
+			<td><?php echo $request['supervisor_name'] ?></td>
+			<td><?php echo $request['office_address'] ?></td>
+			<td><?php echo $request['city'] ?></td>
+			<td><?php echo $request['zip'] ?></td>
+			<td><?php echo $request['status'] ?></td>
 				<td> <a class="btn btn-primary">Approve </a></td>
 				<td> <a class="btn btn-warning">Reject </a></td>
 		</tr>
+		<?php } ?>
 	</tbody>
 </table>
 

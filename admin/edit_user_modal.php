@@ -7,44 +7,45 @@
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<form class="row g-3">
+				<form class="row g-3" method="POST">
 
 
 					<div class="col-md-6">
-						<label for="inputEmail4" class="form-label">First Name</label>
+						<label for="first_name" class="form-label">First Name</label>
 						<input type="text" class="form-control" id="first_name" name="first_name">
 					</div>
 					<div class="col-md-6">
-						<label for="inputPassword4" class="form-label">Last Name</label>
+						<label for="last_name" class="form-label">Last Name</label>
 						<input type="text" class="form-control" id="last_name" name="last_name">
 					</div>
-					<label for="inputEmail4" class="form-label">Email</label>
+					<div class="col-md-12">
+					<label for="email" class="form-label">Email</label>
 					<input type="email" class="form-control" id="email" name="email">
 			</div>
 			<div class="col-md-6">
-				<label for="inputPassword4" class="form-label">Supervisor Name</label>
+				<label for="supervisor_name" class="form-label">Supervisor Name</label>
 				<input type="text" class="form-control" id="supervisor_name" name="supervisor_name">
 			</div>
 			<div class="col-12">
-				<label for="inputAddress" class="form-label">Password</label>
+				<label for="password" class="form-label">Password</label>
 				<input type="password" class="form-control" id="password" name="password">
 			</div>
 			<div class="col-12">
-				<label for="inputAddress2" class="form-label">Office Address</label>
-				<input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+				<label for="address" class="form-label">Office Address</label>
+				<input type="text" class="form-control" name="address" id="address" placeholder="Apartment, studio, or floor">
 			</div>
 			<div class="col-md-6">
-				<label for="inputCity" class="form-label">City</label>
-				<input type="text" class="form-control" id="inputCity">
+				<label for="city" class="form-label">City</label>
+				<input type="text" class="form-control" id="city" name="city">
 			</div>
 			<div class="col-md-2">
-				<label for="inputZip" class="form-label">Zip</label>
-				<input type="text" class="form-control" id="inputZip">
+				<label for="zip" class="form-label">Zip</label>
+				<input type="text" class="form-control" id="zip" name="zip">
 			</div>
 
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-				<button type="button" class="btn btn-success">Create User</button>
+				<button type="submit" class="btn btn-success" name="create_user">Create User</button>
 			</div>
 			</form>
 		</div>

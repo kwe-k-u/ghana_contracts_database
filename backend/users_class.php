@@ -20,15 +20,6 @@ require_once ('db_class.php');
 		}
 
 
-		function create_user($first_name, $last_name, $password, $email, $city, $office_address, $zip, $creation_date, $status){
-			return $this->query("INSERT INTO users (first_name, last_name, password, email, city, office_address, zip, creation_date, status) "
-			."VALUE ($first_name, $last_name, $password, $email, $city, $office_address, $zip, $creation_date, $status);");
-		}
-
-
-		function delete_user($user_id){
-			return $this->query("UPDATE users SET status='deleted' where user_id = $user_id;");
-		}
 
 
 		function request_account ($first_name, $last_name, $gov_email, $sup_name, $office_address, $city, $zip, $password){

@@ -16,18 +16,24 @@
 		</thead>
 
 		<tbody>
-			<tr>
-				<th scope="row">1</th>
-				<td>Kojo Akoto</td>
-				<td>00233***454</td>
-				<td>Kwame Ato</td>
-				<td>00233*****555</td>
-				<td>5 623 00</td>
-				<td>12/21/2021</td>
-				<td>Police highway patrol</td>
-				<td><button data-bs-toggle="modal" data-bs-target="#editUserModal" class="btn btn-info">Edit </button></td>
-				<td><button data-bs-toggle="modal" data-bs-target="#deleteUserModal" class="btn btn-danger">Delete </button></td>
-			</tr>
+			<?php
+			$transactions = get_transactions();
+
+			foreach ($transactions as $transaction) {
+			?>
+				<tr>
+					<th scope="row"><?php echo $transaction['transaction_id'] ?></th>
+					<td>Kojo Akoto</td>
+					<td><?php echo obscure($transaction['sender_account']) ?></td>
+					<td>Kwame Ato</td>
+					<td><?php echo obscure($transaction['recipient_account']) ?></td>
+					<td><?php echo formatNumber($transaction['amount']) ?></td>
+					<td><?php echo formatDate($transaction['transaction_date']) ?></td>
+					<td>Police highway patrol</td>
+					<td><button data-bs-toggle="modal" data-bs-target="#editUserModal" class="btn btn-info">Edit </button></td>
+					<td><button data-bs-toggle="modal" data-bs-target="#deleteUserModal" class="btn btn-danger">Delete </button></td>
+				</tr>
+			<?php } ?>
 		</tbody>
 	</table>
 
