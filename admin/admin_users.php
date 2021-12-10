@@ -33,6 +33,7 @@ $users = get_all_users();
 				<th scope="col">Office Address</th>
 				<th scope="col">Zip</th>
 				<th scope="col">Creation Date</th>
+				<th scope="col">Status</th>
 				<th scope="col">Reset Password</th>
 				<th scope="col">Delete user</th>
 			</tr>
@@ -53,14 +54,15 @@ foreach ($users as $index => $user) {
 				<td><?php echo $user["office_address"] ?></td>
 				<td><?php echo $user["zip"] ?></td>
 				<td><?php echo formatDate($user["creation_date"]) ?></td>
+				<td><?php echo $user["status"] ?></td>
 				<td><button data-bs-toggle="modal" data-bs-target="#editUserModal" class="btn btn-info">Edit </button></td>
 				<td><button data-bs-toggle="modal" data-bs-target="#deleteUserModal" class="btn btn-danger">Delete </button></td>
 			</tr>
 			<?php } ?>
 		</tbody>
 	</table>
-	<?php require_once("edit_user_modal.php") ?>
 	<?php require_once("delete_user_modal.php") ?>
+	<?php require_once("edit_user_modal.php") ?>
 </section>
 
 

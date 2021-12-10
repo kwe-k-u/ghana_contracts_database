@@ -3,7 +3,6 @@
 <section id="password_table"  style="display: none;">
 
 <table class="table table-hover table-bordered fixed-head">
-	<caption>List of All contracts</caption>
 	<h4>Password Requests</h4>
 	<thead>
 		<tr>
@@ -34,7 +33,7 @@
 			<td><?php echo $request['city'] ?></td>
 			<td><?php echo $request['zip'] ?></td>
 			<td><?php echo $request['status'] ?></td>
-				<td> <a href="insert_contract.php" class="btn btn-success">Approve </a></td>
+				<td> <a href="insert_contract.php" target="_blank" class="btn btn-success">Approve </a></td>
 				<td> <a href="insert_contract.php" class="btn btn-warning">Reject </a></td>
 		</tr>
 		<?php } ?>

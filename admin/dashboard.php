@@ -44,7 +44,7 @@ signedIn($_SESSION)
 		<hr>
 		<ul class="nav nav-pills flex-column mb-auto">
 			<li class="nav-item">
-				<a class="nav-link active" onclick="changeView(event, 'dashboard_section')">
+				<a href="#" class="nav-link active" onclick="changeView(event, 'dashboard_section')">
 					<i class="bi bi-house"></i>
 					Dashboard
 				</a>
@@ -52,7 +52,7 @@ signedIn($_SESSION)
 
 
 			<li>
-				<a  class="nav-link text-white" onclick="changeView(event, 'users_section')">
+				<a href="#"  class="nav-link text-white" onclick="changeView(event, 'users_section')">
 					<i class="bi bi-person-rolodex"></i>
 					Users
 				</a>
@@ -60,23 +60,23 @@ signedIn($_SESSION)
 
 
 			<li>
-				<a class="nav-link text-white" onclick="changeView(event, 'transactions_section')">
+				<a href="#" class="nav-link text-white" onclick="changeView(event, 'transactions_section')">
 					<i class="bi bi-coin"></i>
 					Transactions
 				</a>
 			</li>
 
 			<li>
-				<a class="nav-link text-white" onclick="changeView(event, 'contracts_section')">
+				<a href="#" class="nav-link text-white" onclick="changeView(event, 'contracts_section')">
 					<i class="bi bi-briefcase"></i>
 					Contracts
 				</a>
 			</li>
 			<li>
-				<a class="nav-link text-white" onclick="changeView(event, 'requests_section')">
+				<a href="#" class="nav-link text-white" onclick="changeView(event, 'requests_section')">
 					<i class="bi bi-envelope"></i>
 					Requests
-				</a>
+</a>
 			</li>
 		</ul>
 
@@ -86,7 +86,7 @@ signedIn($_SESSION)
 		<div class="dropdown" id="profile_tag">
 			<a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
 				<img src="https://github.com/mdo.png" alt="" class="rounded-circle me-2" width="32" height="32">
-				<strong>Kwame</strong>
+				<strong><?php echo $_SESSION['user_name']; ?></strong>
 			</a>
 			<ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
 				<li><a class="dropdown-item" href="#">Profile</a></li>

@@ -52,6 +52,7 @@ class Admin extends Connection{
 	function search_user_by_email($email){
 		return $this->fetchOne("SELECT * FROM users WHERE email = '$email'");
 	}
+
 }
 
 ?>
