@@ -21,4 +21,28 @@ if (isset($_POST["create_user"])){
 		$_POST["city"], $_POST["address"], $_POST["zip"], $creation_date, "active");
 	}
 }
+
+if (isset($_POST["password_reset_approve"])){
+	$hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
+	password_request_action($_POST["id"],"approved", $hash, $_POST["email"]);
+}
+
+
+if (isset($_POST["password_reset_reject"])){
+	password_request_action($_POST["id"],"rejected", "",$_POST["email"]);
+}
+
+// if (isset($_POST["password_reset_approve"])){
+// 	password_request_action($_POST["id"],"approved", $_POST["password"],$_POST["rEmail"]);
+// }
+
+
+// if (isset($_POST["password_reset_reject"])){
+// 	password_request_action($_POST["id"],"rejected", "");
+
+// }
+
+
+
+
  ?>

@@ -22,10 +22,9 @@
 		<?php
 			$resets = get_password_requests();
 
-			foreach ($resets as $request){
-		?>
+			foreach ($resets as $request){?>
 		<tr>
-			<th scope="row"><?php echo $request['request_id'] ?></th>
+			<th scope="row"> <?php echo $request['request_id'] ?> </th>
 			<td><?php echo $request['last_name'] ?></td>
 			<td><?php echo $request['email'] ?></td>
 			<td><?php echo $request['supervisor_name'] ?></td>>
@@ -33,10 +32,20 @@
 			<td><?php echo $request['city'] ?></td>
 			<td><?php echo $request['zip'] ?></td>
 			<td><?php echo $request['status'] ?></td>
-				<td> <a href="insert_contract.php" target="_blank" class="btn btn-success">Approve </a></td>
-				<td> <a href="insert_contract.php" class="btn btn-warning">Reject </a></td>
+			<?php
+				if ($request["status"] == "pending"){
+			?>
+			<form action="dashboard.php" method="post">
+				<input type="text" name="id" value ='<?php echo $request["request_id"]?>' hidden>
+				<input type="text" value="<?php echo $request['email']?>" name="email" hidden>
+				<input type="text" value="<?php echo $request['password']?>" name="password" hidden>
+				<td> <button class="btn btn-primary" name="password_reset_approve"> Approve </button></td>
+				<td> <button class="btn btn-warning"name="password_reset_reject">Reject </button></td>
+			</form>
+			<?php } ?>
 		</tr>
 		<?php } ?>
+
 	</tbody>
 </table>
 

@@ -52,6 +52,10 @@ class Admin extends Connection{
 		return $this->query("UPDATE users SET password= '$newPassword' WHERE user_id = $id;");
 	}
 
+	function password_request_update($id, $status){
+		return $this->query("UPDATE password_requests SET status= '$status' WHERE request_id = $id;");
+	}
+
 	function delete_user($user_id){
 		return $this->query("UPDATE users SET status='deleted' where user_id = $user_id;");
 	}

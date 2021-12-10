@@ -156,4 +156,18 @@ require_once dirname(__FILE__) ."/../models/admin_class.php";
 		$admin = new Admin();
 		$admin->change_password($id, $newPassword);
 	}
+	function search_by_email($email){
+		$admin = new Admin();
+		return $admin->search_user_by_email($email);
+	}
+
+	function password_request_action($id, $status, $password, $email){
+		$admin = new Admin();
+		$admin->password_request_update($id, $status);
+		if ($status === "approved"){
+			$userId = search_by_email($email);
+			change_password($userId['user_id'], $password);
+		}
+
+	}
 	?>

@@ -9,20 +9,8 @@ require_once(dirname(__FILE__) ."/php_functions/user_functions.php");
 $users = get_all_users();
 
 ?>
-	<!-- table actions  -->
-	<section>
-
-		<!-- <form action="" method="post"> -->
-			<div class="input-group mb-3" id="users_action_div">
-				<input type="search" name="user_search" id="user_search_bar">
-				<button type="" class="input-group-text">Search</button>
-			</div>
-			<!-- </form> -->
-			<td><button data-bs-toggle="modal" data-bs-target="#editUserModal" class="btn btn-info">Add User </button></td>
-	</section>
-
-	<!-- Use table  -->
-	<h3>Users</h3>
+		<h3>Users</h3>
+		<button data-bs-toggle="modal" data-bs-target="#editUserModal" class="btn btn-info">Add User </button>
 	<table class="table table-stripped sortable searchable">
 		<script src="javascript/users.js"></script>
 		<thead>

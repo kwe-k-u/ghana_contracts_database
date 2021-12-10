@@ -34,9 +34,16 @@
 			<td><?php echo $request['city'] ?></td>
 			<td><?php echo $request['zip'] ?></td>
 			<td><?php echo $request['status'] ?></td>
-				<td> <a class="btn btn-primary">Approve </a></td>
-				<td> <a class="btn btn-warning">Reject </a></td>
+			<?php
+				if ($request["status"] === "pending"){
+			?>
+			<form action="dashboard.php" method="post">
+				<input type="text" name="id" value ='<?php echo $request["request_id"]?>' hidden>
+				<td> <button class="btn btn-primary" name="password_reset_approve"> Approve </button></td>
+				<td> <button class="btn btn-warning"name="password_reset_reject">Reject </button></td>
+			</form>
 		</tr>
+		<?php } ?>
 		<?php } ?>
 	</tbody>
 </table>
