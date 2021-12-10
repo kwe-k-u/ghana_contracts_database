@@ -1,6 +1,13 @@
 <section id="users_section" class="col-9 dashboard_content" style="display: none;">
 
+<?php
 
+require_once(dirname(__FILE__) ."/controllers/adminUser_controller.php");
+require_once(dirname(__FILE__) ."../../backend/php_functions/functions.php");
+
+$users = get_all_users();
+
+?>
 	<!-- table actions  -->
 	<section>
 
@@ -32,18 +39,24 @@
 		</thead>
 
 		<tbody>
+		<?php
+
+foreach ($users as $index => $user) {
+
+?>
 			<tr>
-				<th scope="row">1</th>
-				<td>Kweku</td>
-				<td>Acquaye</td>
-				<td>kwekuaacquaye@gmail.com</td>
-				<td>Accra</td>
-				<td>Trantra hill, WES 229</td>
-				<td>00233</td>
-				<td>12/21/2021</td>
+				<th scope="row"><?php echo $user["user_id"] ?></th>
+				<td><?php echo $user["first_name"] ?></td>
+				<td><?php echo $user["last_name"] ?></td>
+				<td><?php echo $user["email"] ?></td>
+				<td><?php echo $user["city"] ?></td>
+				<td><?php echo $user["office_address"] ?></td>
+				<td><?php echo $user["zip"] ?></td>
+				<td><?php echo formatDate($user["creation_date"]) ?></td>
 				<td><button data-bs-toggle="modal" data-bs-target="#editUserModal" class="btn btn-info">Edit </button></td>
 				<td><button data-bs-toggle="modal" data-bs-target="#deleteUserModal" class="btn btn-danger">Delete </button></td>
 			</tr>
+			<?php } ?>
 		</tbody>
 	</table>
 	<?php require_once("edit_user_modal.php") ?>

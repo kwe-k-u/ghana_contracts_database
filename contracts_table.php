@@ -165,7 +165,7 @@
 
 			?>
 				<tr>
-					<th scope="row"><?php echo $index + 1 ?></th>
+					<th scope="row"><?php echo $contract["project_id"] ?></th>
 					<td><?php echo $contract["project_name"] ?></td>
 					<td><?php echo $contract["project_description"] ?></td>
 					<td><?php echo $contract["contractor_name"] ?></td>

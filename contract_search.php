@@ -22,7 +22,6 @@
 <?php require_once "backend/controllers/projects_controller.php"; ?>
 
 
-<?php require_once "contracts_stats.php"; ?>
 <?php require_once "contracts_table.php"; ?>
 
 
