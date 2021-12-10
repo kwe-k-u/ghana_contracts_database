@@ -1,8 +1,8 @@
 <?php
 
 define("servername", "localhost");
-define("username", "deploy");
-define("password", "");
+define("username", "root");
+define("password", "complex_password");
 define("dbname", "government_contracts");
 
 ?>
