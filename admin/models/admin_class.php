@@ -98,6 +98,8 @@ class Admin extends Connection{
         join contractors on bank_accounts.account_number = contractors.account_number;');
 	}
 
+	
+
 
 
 }?>

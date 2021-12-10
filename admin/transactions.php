@@ -12,7 +12,6 @@
 				<th scope="col">Recipient Account</th>
 				<th scope="col">Amount</th>
 				<th scope="col">Transaction Date</th>
-				<th scope="col">Project name</th>
 			</tr>
 		</thead>
 
@@ -24,13 +23,16 @@
 			?>
 				<tr>
 					<th scope="row"><?php echo $transaction['transaction_id'] ?></th>
-					<td>Kojo Akoto</td>
+					<td><?php
+						echo get_account_owner($transaction['sender_account']);
+					?></td>
 					<td><?php echo obscure($transaction['sender_account']) ?></td>
-					<td>Kwame Ato</td>
+					<td><?php
+						echo get_account_owner($transaction['recipient_account']);
+					?></td>
 					<td><?php echo obscure($transaction['recipient_account']) ?></td>
 					<td><?php echo formatNumber($transaction['amount']) ?></td>
 					<td><?php echo formatDate($transaction['transaction_date']) ?></td>
-					<td>Police highway patrol</td>
 				</tr>
 			<?php } ?>
 		</tbody>

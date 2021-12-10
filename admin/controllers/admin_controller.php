@@ -204,4 +204,24 @@ require_once dirname(__FILE__) ."/../models/admin_class.php";
 		return $admin->get_cont_accounts();
 
 	}
+
+	function get_account_owner($number){
+		$gov = get_gov_accounts();
+		foreach ($gov as $g){
+			if ($g["account_number"] == $number){
+				return $g["institution_name"];
+			}
+		}
+
+		$gov = get_cont_accounts();
+		foreach ($gov as $g){
+			if ($g["account_number"] == $number){
+				return $g["contractor_name"];
+			}
+		}
+	}
+
+	function get_project_name(){
+		
+	}
 ?>
