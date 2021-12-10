@@ -1,5 +1,6 @@
 <section id="transactions_section" class="dashboard_content" style="display: none;">
 	<h3>Transactions </h3>
+	<button data-bs-toggle="modal" data-bs-target="#addTransactionModal" class="btn btn-info">Add Transaction </button>
 
 	<table class="table table-stripped sortable searchable">
 		<thead>
@@ -35,5 +36,6 @@
 		</tbody>
 	</table>
 
+	<?php require_once("transactionModal.php") ?>
 
 </section>

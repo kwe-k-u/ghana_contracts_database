@@ -77,8 +77,30 @@ class Admin extends Connection{
 	return $this->query("UPDATE account_requests SET status = '$status' WHERE $id = $id");
 	}
 
-}
+	function addTransaction($amount,$date, $sender,$recipient){
+		return $this->query("INSERT INTO transactions (amount, sender_account, recipient_account, transaction_date) "
+		."$amount, '$sender', '$recipient', '$date';");
+	}
 
 
 
-?>
+	function updateTransaction($id, $amount,$date, $sender,$recipient){
+		return $this->query("UPDATE transactions SET amount = $amount, sender_account = '$sender', recipient_account = '$recipient', transaction_date = '$date'  WHERE transaction_id = $id;");
+	}
+
+	function get_gov_accounts(){
+		return $this->fetch("SELECT *
+        FROM bank_accounts
+        join institutions on bank_accounts.account_number = institutions.account_number;");
+	}
+
+
+	function get_cont_accounts(){
+		return $this->fetch('SELECT *
+        FROM bank_accounts
+        join contractors on bank_accounts.account_number = contractors.account_number;');
+	}
+
+
+
+}?>

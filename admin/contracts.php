@@ -21,7 +21,6 @@ $contracts = get_all_contracts();
 				<th scope="col">BUDGET</th>
 				<th scope="col">STATUS</th>
 				<th scope="col">ADD TRANSACTION</th>
-				<th scope="col">Edit</th>
 			</tr>
 		</thead>
 
@@ -43,7 +42,6 @@ foreach ($contracts as $index => $contract) {
 		<td><?php echo "GHC " . formatNumber($contract["project_budget"]) ?></td>
 		<td><?php echo $contract["status"] ?></td>
 		<td><button class="btn btn-primary">Add transaction</button></td>
-		<td><button class="btn btn-primary">Edit</button></td>
 	</tr>
 <?php } ?>
 		</tbody>
