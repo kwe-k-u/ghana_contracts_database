@@ -2,7 +2,7 @@
 
 define("servername", "localhost");
 define("username", "root");
-define("password", "complex_password");
+define("password", "purple");
 define("dbname", "government_contracts");
 
 ?>
