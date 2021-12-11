@@ -1,5 +1,5 @@
 <?php
-require_once dirname( __FILE__ ) . '/' . '../users_class.php';
+require_once  '/' . '../users_class.php';
 
 
 	function sign_in ($username, $password){

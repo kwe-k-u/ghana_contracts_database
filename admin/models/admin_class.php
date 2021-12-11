@@ -1,6 +1,6 @@
 <?php
 
-require_once dirname( __FILE__ ) . '/' . '../../backend/db_class.php';
+require_once '/' . '../../backend/db_class.php';
 
 
 class Admin extends Connection{
@@ -98,7 +98,7 @@ class Admin extends Connection{
         join contractors on bank_accounts.account_number = contractors.account_number;');
 	}
 
-	
+
 
 
 

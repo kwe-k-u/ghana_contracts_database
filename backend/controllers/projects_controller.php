@@ -1,5 +1,5 @@
 <?php
-	require_once dirname( __FILE__ ) . '/' . '../projects_class.php';
+	require_once  '/' . '../projects_class.php';
 
 
 	function get_all_projects(){

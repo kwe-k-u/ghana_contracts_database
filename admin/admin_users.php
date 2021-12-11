@@ -2,9 +2,9 @@
 
 <?php
 
-require_once(dirname(__FILE__) ."/controllers/admin_controller.php");
-require_once(dirname(__FILE__) ."../../backend/php_functions/functions.php");
-require_once(dirname(__FILE__) ."/php_functions/user_functions.php");
+require_once("/controllers/admin_controller.php");
+require_once("../../backend/php_functions/functions.php");
+require_once("/php_functions/user_functions.php");
 
 $users = get_all_users();
 

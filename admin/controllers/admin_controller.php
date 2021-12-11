@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__FILE__) ."/../models/admin_class.php";
+require_once "/../models/admin_class.php";
 
 	function get_all_users(){
 		$user = new Admin();
@@ -222,6 +222,6 @@ require_once dirname(__FILE__) ."/../models/admin_class.php";
 	}
 
 	function get_project_name(){
-		
+
 	}
 ?>

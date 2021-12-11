@@ -46,7 +46,7 @@
 </body>
 
 <?php
-require_once(dirname(__FILE__) ."/controllers/admin_controller.php");
+require_once("/controllers/admin_controller.php");
 	if (isset($_POST["login"])){
 		$result = sign_in($_POST["email"], $_POST["password"]);
 
